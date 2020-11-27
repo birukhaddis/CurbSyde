@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>SIGN-IN PAGE</title>
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/fontawesome-free-5.14.0-web/css/all.css">
+
+  <!-- Java Script -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <!-- Font -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- icon -->
+
+  <!-- template -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="author" content="colorlib.com">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  <link href="css/main.css" rel="stylesheet" />
+
+
+  <!-------------------------------------- MY NEW STUFF ----------------------------->
+
+</head>
+
+<body>
+  <section id="banner">
+    <h4> We prioritize the health and safety of our users. Read about our
+       respose to COVID-19 and the many safety steps we've taken.
+      <a href="" onclick="openCDC()"> Learn More</a></h4>
+  </section>
+
+  <!------------------------------Nav Bar -------------------------------->
+  <nav class="navbar bg-dark navbar-expand-lg navbar-dark">
+          <a class="navbar-brand" href="index.html">CurbSyde</a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="sign-in.html">Sign In</a>
+              </li>
+          </ul>
+       </div>
+      </nav>
+
+
+
+
+
+  <!-- ----------SIGN IN/SIGN UP PAGE...CSS, HTML, AND JAVASCRIPT ARE ALL ON THIS FILE. DO NOT CHANGE ANYTHING! ---------- -->
+
+
+  <!--------------------CSS CODE FOR SIGN IN/SIGN UP PAGE...DO NOT CHANGE------------->
+  <style>
+
+    .sign-in-sign-up .sign-up-element {
+      display: none;
+    }
+
+    .sign-in-sign-up.sign-up .sign-up-element {
+      display: inline-block;
+    }
+
+    .sign-in-sign-up .sign-in-element {
+      display: block;
+    }
+
+    .sign-in-sign-up.sign-up .sign-in-element {
+      display: none;
+    }
+
+    label {
+      display: block;
+    }
+
+    button.submit {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    .sign-in-shadow {
+      padding: 5px;
+      width: auto;
+      height: auto;
+      background: #DEDEDE;
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    }
+
+
+
+    .tick-mark {
+      position: relative;
+      left: 0px;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+    }
+
+    .tick-mark::before {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      height: 50%;
+      width: 3px;
+      background-color: green;
+      content: "";
+      transform: translateX(10px) rotate(-45deg);
+      transform-origin: left bottom;
+    }
+
+    .tick-mark::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 100%;
+      background-color: green;
+      content: "";
+      transform: translateX(10px) rotate(-45deg);
+      transform-origin: left bottom;
+    }
+
+    .input-instructions {
+      color: red;
+      font-weight: bold;
+    }
+
+    #tick-for-email,
+    #tick-for-password,
+    #tick-for-confirm-password,
+    #tick-for-name {
+      display: none;
+    }
+
+    .sign-in-sign-up.email-validated>#tick-for-email {
+      display: inline-block;
+    }
+
+    .sign-in-sign-up.email-validated #instructions-for-email {
+      display: none;
+    }
+
+    .sign-in-sign-up.password-validated>#tick-for-password {
+      display: inline-block;
+    }
+
+    .sign-in-sign-up.password-validated #instructions-for-password {
+      display: none;
+    }
+
+    .sign-in-sign-up.confirm-password-validated>#tick-for-confirm-password {
+      display: inline-block;
+    }
+
+    .sign-in-sign-up.confirm-password-validated>#instructions-for-confirm-password {
+      display: none;
+    }
+
+    .sign-in-sign-up.name-validated>#tick-for-name {
+      display: inline-block;
+    }
+
+    .sign-in-sign-up.name-validated>#instructions-for-name {
+      display: none;
+    }
+  </style>
+
+
+  <!--JAVASCRIPT CODE...DEFINE toggleSignUp ... to be used in HTML-->
+  <script type="text/javascript">
+    const toggleSignUp = function() {
+      document.querySelector(".sign-in-sign-up").classList.toggle("sign-up");
+      document.querySelector("#form-button-sign-in").disabled = true;
+      document.querySelector("#form-button-sign-up").disabled = true;
+
+      document.querySelector(".sign-in-sign-up").classList.remove("confirm-password-validated");
+    }
+  </script>
+
+
+  <!---------------------HTML CODE FOR SIGN IN/SIGN UP PAGE....DO NOT CHANGE---------------->
+  <section id="Search-Bar">
+    <div class="sign-in-container s003">
+
+      <div class="sign-in-shadow">
+        <div class="sign-in-sign-up">
+          <div class="sign-in-title sign-up-element join-us">
+            <h2>Join Us!</h2>
+            <p>Sign up and start getting great deals today!</p>
+          </div>
+          <div class="sign-in-title sign-in-element welcome-back">
+            <h3>Welcome Back!</h3>
+            <p>Already a member? Sign in.</p>
+          </div>
+
+          <label for="input-email">Email Address</label>
+          <input type="email" name="email" id="input-email" placeholder="email@curbsyde.com" title="Hello" />
+          <div class="tick-mark" id="tick-for-email"></div>
+<br> <br>
+          <label for="input-password">Password </label>
+          <input type="password" name="password" id="input-password" title="Must contain at least 8 characters including one uppercase letter, one lowercase letter, one digit, and one special character (!@#$%^&*)" />
+          <div class="tick-mark" id="tick-for-password"></div>
+
+          <br class="sign-up-element">
+          <label class="sign-up-element" for="confirm-password">Confirm Password</label>
+          <div class="input-instructions sign-up-element" id="instructions-for-confirm-password">&nbsp;*Must match</div>
+          <br class="sign-up-element">
+          <input class="sign-up-element" type="password" id="confirm-password" title="Goodbye" />
+          <div class="tick-mark sign-up-element" id="tick-for-confirm-password"></div>
+
+          <br class="sign-up-element">
+          <label class="sign-up-element" for="input-name">Name</label>
+          <br class="sign-up-element">
+          <input class="sign-up-element" type="text" id="input-name" />
+          <br class="sign-up-element">
+
+
+          <button class="submit btn btn-lg btn-primary sign-in-element form-button" id="form-button-sign-in" type="button" disabled>Sign In</button>
+          <button class="submit btn btn-lg btn-primary sign-up-element form-button" id="form-button-sign-up" type="button">Create New Account!</button>
+          <br>
+          <a href="javascript:forgotPassword()" class="sign-in-element">Forgot Password</a>
+          <a href="javascript:toggleSignUp()" class="sign-in-element">Create New Account!</a>
+          <a href="javascript:toggleSignUp()" class="sign-up-element">Already a member? Sign In!</a>
+        </div>
+      </div>
+    </div>
+
+
+    <!----------------------JAVASCRIPT CODE FOR EMAIL, PASSWORD, and NAME VALIDATION....DO NOT CHANGE---------------->
+    <script type="text/javascript">
+      function validateEmail(email) {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        const isValid = re.test(String(email).toLowerCase());
+        if (isValid) {
+          document.querySelector(".sign-in-sign-up").classList.add("email-validated");
+        } else {
+          document.querySelector(".sign-in-sign-up").classList.remove("email-validated");
+        }
+        return isValid;
+      }
+
+      function validatePassword(password) {
+        var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+        const isValid = strongRegex.test(password);
+        if (isValid) {
+          document.querySelector(".sign-in-sign-up").classList.add("password-validated");
+        } else {
+          document.querySelector(".sign-in-sign-up").classList.remove("password-validated");
+        }
+        return isValid;
+      }
+
+      function validateName(name) {
+        const isValid = name.length > 1;;
+        if (isValid) {
+          document.querySelector(".sign-in-sign-up").classList.add("name-validated");
+        } else {
+          document.querySelector(".sign-in-sign-up").classList.remove("name-validated");
+        }
+        return isValid;
+      }
+
+      function validateConfirmPassword(a, b) {
+        const isValid = a === b;
+        if (isValid) {
+          document.querySelector(".sign-in-sign-up").classList.add("confirm-password-validated");
+        } else {
+          document.querySelector(".sign-in-sign-up").classList.remove("confirm-password-validated");
+        }
+        return isValid;
+      }
+
+      const evaluateForm = function(e) {
+        let passed = false;
+        const emailValidated = validateEmail(document.querySelector("#input-email").value);
+        const passwordValidated = validatePassword(document.querySelector("#input-password").value);
+        passed = emailValidated && passwordValidated;
+
+        if (passed && document.querySelector(".sign-in-sign-up").classList.contains("sign-up")) {
+          const passwordConfirmationValidated = validateConfirmPassword(document.querySelector("#confirm-password").value, document.querySelector("#input-password").value);
+          const nameValidated = validateName(document.querySelector("#input-name").value);
+          passed = passwordConfirmationValidated && nameValidated;
+          document.querySelector("#form-button-sign-up").disabled = !passed;
+        } else {
+          document.querySelector("#form-button-sign-in").disabled = !passed;
+        }
+
+      }
+      document.querySelector("#input-email").addEventListener("input", evaluateForm);
+      document.querySelector("#input-password").addEventListener("input", evaluateForm);
+      document.querySelector("#confirm-password").addEventListener("input", evaluateForm);
+      document.querySelector("#input-name").addEventListener("input", evaluateForm);
+    </script>
+
+
+    <!-- ************************************************************************** -->
+    <!-- Footer -->
+    <footer id="footer">
+      <i class="social-icon fab fa-facebook-f"></i>
+      <i class="social-icon fab fa-twitter"></i>
+      <i class="social-icon fab fa-instagram"></i>
+      <i class="social-icon fas fa-envelope"></i>
+      <p>© CurbSyde 2020</p>
+    </footer>
+
+</body>
+
+</html>
